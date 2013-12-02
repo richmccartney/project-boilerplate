@@ -1,0 +1,282 @@
+/* ======================================================= */
+/*                                                         */
+/*                                                         */
+/*    Boiler plate                                         */
+/*                                                         */
+/*                                                         */
+/* ======================================================= */
+/*                                                         
+/*
+/*    Development by Message
+/*    http://www.message.co.uk
+/*
+/*    Basic v1.0
+/*    Created by Richard McCartney
+/*
+/*
+/* ======================================================= */
+
+* {
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-size: 100%;
+}
+
+/* Text and links 
+---------------------------------------------------------- */
+
+p {
+
+}
+
+strong,
+b {
+
+}
+
+i {
+
+}
+
+a {
+
+}
+
+a:hover {
+
+}
+
+p a {
+
+}
+
+p a:hover {
+
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5 {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+blockquote {
+
+}
+
+blockquote p {
+
+}
+
+blockquote p:before {
+	content: open-quote;
+	content: '“';
+}
+
+blockquote p:after {
+	content: close-quote;
+	content: '”';
+}
+
+blockquote footer {
+
+}
+
+hr {
+
+}
+
+/* Form elements
+---------------------------------------------------------- */
+
+input,
+textarea {
+
+}
+
+input[type="checkbox"], 
+input[type="radio"], 
+input[type="image"] {
+
+}
+
+select {
+
+}
+
+label {
+
+}
+
+button {
+
+}
+
+input:hover,
+textarea:hover {
+
+}
+
+input[type]:focus, 
+textarea:focus, 
+select:focus, 
+select:active {
+
+}
+
+button:hover {
+
+}
+
+button:active {
+
+}
+
+/* Button styles
+---------------------------------------------------------- */
+
+.submit,
+.read-more,
+.load,
+.back,
+.accept,
+.cancel,
+.edit {
+
+}
+
+.submit:hover,
+.read-more:hover,
+.load:hover,
+.back:hover,
+.accept:hover,
+.cancel:hover,
+.edit:hover {
+	
+}
+
+.submit:active,
+.read-more:active,
+.load:active,
+.back:active,
+.accept:active,
+.cancel:active,
+.edit:active {
+	
+}
+
+/* Code snippets
+---------------------------------------------------------- */
+
+pre,
+code {
+
+}
+
+/* Table styles
+---------------------------------------------------------- */
+
+table {
+
+}
+
+table th {
+
+}
+
+table td {
+
+}
+
+/* Lists
+---------------------------------------------------------- */
+
+ul,
+ol {
+
+}
+
+ul li,
+ol li {
+
+}
+
+dl {
+
+}
+
+dt {
+
+}
+
+dd {
+
+}
+
+/* Feedback
+---------------------------------------------------------- */
+
+.feedback {
+
+}
+
+.feedback p {
+
+}
+
+.error {
+
+}
+
+.error p {
+
+}
+
+.warning {
+
+}
+
+.warning p {
+
+}
+
+.notice {
+
+}
+
+.notice p {
+	
+}
