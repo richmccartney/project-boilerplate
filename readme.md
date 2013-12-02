@@ -1,6 +1,6 @@
 # Project Boilerplate
 
-Here is the new project boilerplate. This repo is to be used for all future frontend projects and to improve how we structure our project documents and also how we structure our frontend HTML, CSS and JS.
+Here is the new project boilerplate. This repo is to be used for all future frontend projects and to improve how we structure our project documents and also how we structure our frontend HTML, CSS and JS. Bellow is the front end guidelines for refference.
 
 
 <br><br><br>
