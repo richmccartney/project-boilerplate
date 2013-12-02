@@ -1,0 +1,657 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Front-end Guidelines</title>
+
+</head>
+<body>
+<h1>Front-end Guidelines</h1>
+
+<p><strong>Created by Richard McCartney &amp; Aisling Brock</strong></p>
+
+<hr />
+
+<p>This document outlines rules and directions a developer / designer should undertake when starting a new project at Message. These rules are not set in stone but would be greatly helpful to stick close to them to help your fellow front end devs.</p>
+
+<h2>Design &amp; project files</h2>
+
+<hr />
+
+<ul>
+<li><p>All projects will need a folder which is up-to-date with all the required resources. This includes fonts, images, branding documents, a completed UI document and all site designs.</p></li>
+<li><p>All PSD files should try and follow <a href="http://photoshopetiquette.com/">Photoshop Etiquette</a> ..Be friendly to your fellow designer.</p></li>
+<li><p>When creating your new beautiful designs either start or do in tandum the UI Document. This gives a boilerplate for other designers to reference also means you will create a consistant designs and, by that extension, a consistant website. This UI document will also be used for the guidelines template, the first thing to develop before any other front end work.</p></li>
+<li><p>Design in a modular fashion, where possible. If you know you're going to use social icons in 3 or 4 places why design them twice? Each block should be able to move from one main area to another and work seamlessly. This will obviously extend to your front end work meaning you will build a website a lot quicker.</p></li>
+</ul>
+
+
+<h2>General guidelines</h2>
+
+<hr />
+
+<p>These rules are here to make 1) your code semantic, 2) readable and 3) easy for other developers to jump into your work and be able to make any changes.</p>
+
+<h4>Indentation</h4>
+
+<p>All elements should be indented using soft tabs. Hitting tab will create the equivalent of four spaces. You should be able to set this in your chosen IDE.</p>
+
+<p>Markup should be indented to make your markup easy to understand.
+<br></p>
+
+<p><font color="green">
+<em>Correct example of markup intentation and elements</em>
+</font></p>
+
+<pre>
+&lt;div class="container"&gt; 
+    &lt;header class="header"&gt; 
+        &lt;h1 class="logo"&gt; 
+            &lt;a href="/"&gt; Logo&lt;/a&gt; 
+        &lt;/h1&gt; 
+        &lt;nav class="navigation" role="navigation"&gt; 
+            &lt;ul&gt; 
+                &lt;li&gt; 
+                    &lt;a href="/"&gt; Home&lt;/a&gt; 
+                &lt;/li&gt; 
+                &lt;li&gt; 
+                    &lt;a href="/work"&gt; Work&lt;/a&gt; 
+                &lt;/li&gt; 
+                &lt;li&gt; 
+                    &lt;a href="/about"&gt; About&lt;/a&gt; 
+                &lt;/li&gt; 
+                &lt;li&gt; 
+                    &lt;a href="/contact"&gt; Contact&lt;/a&gt; 
+                &lt;/li&gt; 
+            &lt;/ul&gt; 
+        &lt;/nav&gt; 
+    &lt;/header&gt; 
+&lt;/div&gt;  
+</pre>
+
+
+<p><font color="red">
+<em>Incorrect example of markup intentation and elements</em>
+</font></p>
+
+<pre>
+&lt;div class="container"&gt;
+&lt;div class="header"&gt;
+        
+    &lt;header&gt;
+        &lt;div class="logo"&gt;
+        &lt;h1&gt;&lt;a href="/"&gt;Logo&lt;/a&gt;&lt;/h1&gt;
+        &lt;/div&gt;    
+    &lt;/header&gt;
+    
+
+    &lt;nav id="main-site-navigation"&gt;
+            &lt;ul&gt;
+            &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/work"&gt;Work&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/div&gt;
+&lt;/div&gt;  
+</pre>
+
+
+<h4>Readability vs Compression</h4>
+
+<p>We will always prefer readable markup and CSS over file saving. Use of whitespace or ASCII art to break up documents is okay, when appropriate. We will use server-side compression to automatically minify or gzip any client-side files like CSS and JS.</p>
+
+<h4>320 and up</h4>
+
+<p>All mobile sites designed should start from 320px and up. We follow the <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and up</a> mantra.</p>
+
+<h2>Markup</h2>
+
+<hr />
+
+<h5>HTML5</h5>
+
+<p>All sites we develop are to use HTML5 and CSS3 standards. For backward compatability we are to use <a href="https://code.google.com/p/html5shiv/">HTML5 Shiv</a> and cover all HTML5 selectors in a reset stylesheet. CSS will gracefully degrade through all browser versions.</p>
+
+<p>We will test our markup against the <a href="http://validator.w3.org/">W3C validator</a>, to ensure that the markup is well formed. 100% valid code is not necessary, but validation certainly helps to write more maintainable sites as well as debugging code.</p>
+
+<h5>Boilerplate</h5>
+
+<p>We have a standardised way of setting up our files and naming conventions. This is modifiled for our project needs. <del>Fork the GitHub Repo</del>.</p>
+
+<h5>Doctype</h5>
+
+<p>A proper Doctype is always needed and triggers standards mode in your browser, Quirks mode is evil and should be avoided.
+The HTML5 Doctype -
+<code>
+&lt;!DOCTYPE html&gt;
+</code></p>
+
+<h5>Character encoding</h5>
+
+<p>Character encoding all markup should be set as UTF-8, most common and internationally friendly. This should be designated in the <code>&lt;head&gt;</code> of the document.</p>
+
+<p><font color="green">
+<em>Setting the meta tags</em>
+</font></p>
+
+<pre>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt; 
+</pre>
+
+
+<p><font color="green">
+<em>In HTML5</em>
+</font></p>
+
+<pre>
+&lt;meta charset="UTF-8"&gt; 
+</pre>
+
+
+<h5>General markup guidelines</h5>
+
+<p>The following points are guidelines for structuring your HTML markup. Developers should always use markup which is semantic.</p>
+
+<ul>
+<li><p>Use actual <code>&lt;p&gt;</code> elements for paragraph delimiters as opposed to multiple <code>&lt;br/&gt;</code> tags.</p></li>
+<li><p>Make use of <code>&lt;dl&gt;</code> defintion lists and <code>&lt;blockquote&gt;</code> when appropriate.</p></li>
+<li><p>Always try to use <code>&lt;ul&gt;</code> for navigation lists in all <code>&lt;nav&gt;</code> elements.</p></li>
+<li><p>Use <code>&lt;label&gt;</code> fields for all input fields. The <code>for</code> attribute should be associated with itself and the input. Plus put <code>cursor:pointer;</code> on the label as well.</p></li>
+<li><p>Use comments where appropriate to indicate if there are specific needs for particular markup elements.</p></li>
+<li><p>Tables shouldn't be used for page layout, only holding types of information.</p></li>
+<li><p>A logo of a site should generally be a styled <code>&lt;h1&gt;</code>.</p></li>
+<li><p>Try to use <code>&lt;div class="container"&gt;</code> as the main wrap around the whole site.</p></li>
+<li><p>Use <a href="http://en.wikipedia.org/wiki/Microformat">microformates</a> or microdata where appropriate, specifically <code>hCard</code> or <code>adr</code>.</p></li>
+<li><p>Use <a href="http://gsnedders.html5.org/outliner/">HTML5 Outliner</a> to check the document structure is correct and the appropriate landmarks map out the document.</p></li>
+<li><p>Lists, text elements, tables, forms everything should never have a class which explains what it is. Example: a paragraph tag should never have a class of <code>.para</code>, <code>.paragraph</code> or <code>.text</code>.</p></li>
+<li><p>When creating tables make use of <code>&lt;thead&gt;</code> ,<code>&lt;tbody&gt;</code> and <code>&lt;th&gt;</code> tags.</p></li>
+</ul>
+
+
+<p><font color="green">
+<em>Table markup with correct syntax</em>
+</font></p>
+
+<pre>
+&lt;table summary="Example table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Table header 1&lt;/th&gt;
+            &lt;th&gt;Table header 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table data 1&lt;/td&gt;
+            &lt;td&gt;Table data 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+
+<ul>
+<li>Always use title-case for headers and titles. Do not use all caps or all lowercase titles in markup, instead apply the CSS property <code>text-transform: uppercase/lowercase</code>.</li>
+</ul>
+
+
+<h2>CSS</h2>
+
+<hr />
+
+<h4>General principles</h4>
+
+<ul>
+<li><p>Never use <code>@import</code> to link CSS to a HTML document, always use the <code>link</code> tag. It should always be in the <code>head</code> of the document.</p></li>
+<li><p>Don't include inline styles in your document, either style tags or on the elements. This is evil and will be hard to track what styling has been done.</p></li>
+<li>Keep your CSS in order, if using Sublime Text, Coda, Esspresso or TextMate try and use <a href="http://csscomb.com/">CSSComb</a> to keep all your CSS definitions in order and making them easier to read.</li>
+</ul>
+
+
+<p><font color="red">
+<em>Don't use inline styling</em>
+</font></p>
+
+<pre>
+&lt;p style="font-size: 12px; color: #FFFFFF"&gt;This is poor form, I say&lt;/p&gt;
+</pre>
+
+
+<ul>
+<li>Write selectors that are optimised for speed and readability. Avoid extensive CSS classes and chaining. For example keep your class chaining to a minimum of two plus 1 selector, if required. Writing long class selectors can get confusing.</li>
+</ul>
+
+
+<h4>CSS Formatting</h4>
+
+<p>At a minimum, format CSS with selectors on one line each and each styling property on its own line. Indent declarations. Please never do any sort of class nesting or indenting this makes any stylesheet hard to read.</p>
+
+<p><font color="green">
+<em>Correct class name formatting and indenting</em>
+</font></p>
+
+<pre>
+.navigation {
+    float: left;
+    width: 100%;
+}
+
+.navigation li {
+    float: left;
+    width: 100px;
+    margin: 0 20px 0 0;
+}
+</pre>
+
+
+<p><font color="red">
+<em>Incorrect class name formatting and indenting</em>
+</font></p>
+
+<pre>
+header.header div.container nav#navigation {
+float: left;
+width: 100%;
+}
+
+header.header div.container nav#navigation ul li {
+float: left;
+width: 100px;
+margin: 0 20px 0 0;
+}
+</pre>
+
+
+<h4>Classes Vs ID's</h4>
+
+<p>Only give elements an ID attribute if they are unique. HOWEVER, these should not be styled in CSS; we use ID's mainly for JavaScript purposes or for anchoring to sections of a document.</p>
+
+<p>Classes can also be unique but for modular purposes, we aim that all HTML and CSS could be used anywhere. If you pull a selection of HTML from one page and move it to another, the markup and styling should work as intended.</p>
+
+<h4>Naming conventions</h4>
+
+<p>It is preferable to always name the class or ID by the nature of <strong>what it is</strong> rather than <strong>what it looks like</strong>. For example, a button to cancel a form that will be the colour red should have the class <code>.cancel</code> rather than the class <code>.red-button</code>. Incorrectly naming elements or creating long winded names should be avoided. Example: the main navigation should have a class of <code>.navigation</code> instead of <code>.main-side-header-navigation</code>. Think before you name an element.</p>
+
+<h4>Selectors</h4>
+
+<p>With CSS3 we have a wide range of new selectors we can use. <a href="http://www.w3schools.com/cssref/css_selectors.asp">Selectors list</a> Some are not backward compatibile; check <a href="http://caniuse.com/">Can I use</a> for browser support.</p>
+
+<h4>Pseudo-Classes</h4>
+
+<p>These enable you to dynamically style content. Some pseudo-classes are CSS levels 1 and 2. ( <code>:visited, :hover, :first-child</code> etc). Please use for styling purposes rather than functional or content reasons. <a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/">Learn how to use pseudo-classes here</a>.</p>
+
+<h4>Combinators &amp; Attribute Selectors</h4>
+
+<p><strong>Combinators</strong></p>
+
+<p>Combinators provide shortcuts for selecting that are descendant elements, a child element or a sibling. Use these when appropriate.</p>
+
+<p><em>Examples</em></p>
+
+<p>The following selector represents a p element that is child of body:</p>
+
+<pre>
+body > p
+</pre>
+
+
+<p>The following example combines descendant combinators and child combinators.</p>
+
+<pre>
+div ol > li p
+</pre>
+
+
+<p><strong>Attribute</strong></p>
+
+<p>Attribute selectors find specific attribute or values. Knowledge of regular expressions helps with attribute selectors.</p>
+
+<p><em>Examples</em></p>
+
+<p>The following attribute selector represents an h1 element that carries the title attribute, whatever its value:</p>
+
+<pre>
+h1[title]
+</pre>
+
+
+<p>In the following example, the selector represents a span element whose class attribute has exactly the value "example":</p>
+
+<pre>
+span[class="example"]
+</pre>
+
+
+<h4>Specificity</h4>
+
+<p>When working with a complex stylesheet it helps to know how to calculate the value of a selector's specificity, to save you time and to make your selectors more efficient.</p>
+
+<p>Using <code>!important</code> overrides any styling regardless of how high it is. We don't see <strong>any reason</strong> to use this tag. If you're resorting to this there might be something wrong with your CSS. Avoid at all costs.</p>
+
+<h4>Px vs Ems</h4>
+
+<ul>
+<li><p>All fonts should use EMs for font size and line height. Using <a href="http://pxtoem.com/">px to em calculator</a> can help.</p></li>
+<li><p>Pixels should be used for fixed widths. Try to not set heights on elements; allow the content to determine height.</p></li>
+</ul>
+
+
+<h4>Images</h4>
+
+<ul>
+<li><p>All images should be put through <a href="http://imageoptim.com/">ImageOptim</a> before being used.  This reduces the file size to improve loading speed. It removes unrequired comments or colour profiles.</p></li>
+<li><p>Use correct image types:</p>
+
+<ul>
+<li>Graphics are <strong>.gif</strong></li>
+<li>Photos are <strong>.jpg</strong></li>
+<li>Complex graphics (often with transparency) are <strong>.png</strong></li>
+</ul>
+</li>
+<li>Use sprites for rollovers to save on load time.</li>
+</ul>
+
+
+<h4>Shorthand</h4>
+
+<p>We love short hand CSS, try to use it as much as possible. Adding a quick value to margin or padding that is already present is a lot quicker than writing out a whole new line.</p>
+
+<p><font color="green">
+<em>Correct use of CSS shorthand</em>
+</font></p>
+
+<pre>
+.navigation {
+    margin: 20px 0;
+    padding: 0 15px;
+    background: #FFF url(../images/image.jpg) no-repeat top left scroll;
+    font: bold 1em/1.2em Georgia, 'Times New Roman', Serif;
+}
+
+.navigation li {
+    list-style: square inside url(../images/list-image.png);
+}
+</pre>
+
+
+<p><font color="red">
+<em>Incorrect use of CSS shorthand</em>
+</font></p>
+
+<pre>
+.container .header #main-site-navigation {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.2em;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-position: top left;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-attachment: scroll;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Georgia, 'Times New Roman', Serif;
+}
+
+.container .header #main-site-navigation ul li {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url(../images/list-image.png);
+}
+</pre>
+
+
+<h4>Font Styling</h4>
+
+<ul>
+<li><p>All fonts should be styled with the main basic.css file and should follow the designs from the UI document.</p></li>
+<li><p>Links, by default, should show an underline either all the time or on hover. Hover states should also change colour.</p></li>
+<li><p>Hover states should never <strong>remove an underline</strong>.</p></li>
+<li><p>Try to avoid styling underlines with <code>border-bottom</code> issues can arise with broken words. Try to stick with <code>text-decoration</code>.</p></li>
+</ul>
+
+
+<h4>Web Typography</h4>
+
+<p>We will always use <code>@font-face</code> to supply our fonts. Avoid using <code>Cufon</code> completely. All font formats must be included in a project. We do not accept converting fonts or downloading fonts illegally.</p>
+
+<p>Font formats:</p>
+
+<ul>
+<li><p><strong>woff:</strong> WOFF (Web Open Font Format)</p></li>
+<li><p><strong> ttf:</strong> TrueType</p></li>
+<li><p><strong> ttf, otf: </strong>OpenType</p></li>
+<li><p><strong> eot: </strong>Embedded OpenType</p></li>
+<li><p><strong>svg, svgz:</strong> SVG Font</p></li>
+</ul>
+
+
+<p>All fonts if possible should be hosted locally; try to avoid hosted options from Google, TypeKit, MyFonts and Fonts.com. All these providers should provide a hosted version of the font files and this will improve load/request times for these assets.</p>
+
+<p>Use iconfonts when appropriate, <a href="http://fontello.com/">Fontello</a> and <a href="http://fontawesome.com/">Font Awesome</a> are great examples of icon fonts.</p>
+
+<p>Remember all font CSS should be calling in a file called fonts.css.</p>
+
+<h2>JavaScript</h2>
+
+<hr />
+
+<p>Primarily we develop all javascript plugins and needs in <a href="http://jquery.com/">jQuery</a>, although plain JavaScript experience can also be an advantage. For Mothership we currently use v2.0.0+ and for frontend site work we will use v1.10.2+. <em>The boilerplate repo will always be updated with the latest version of jQuery</em>.</p>
+
+<h4>General rules and practices</h4>
+
+<ul>
+<li><p>All javascript files should be well documented. Over documenting a file can be very adventagous for more novice developers to the more experienced.</p></li>
+<li><p>Explain what the plugin is for, any classes or elements it would affect and any pages it's used on. Adding a concise description of where it's being used will greatly help your fellow front end devs.</p></li>
+<li><p>When creating a new bit of functionality, small or big, it should be completely placed in its own file and named appropriately. This should make it easier to find and to understand what it is for.</p></li>
+</ul>
+
+
+<p>Example a plugin called <code>carousel.js</code> will be obvious what it is doing from the name and follow the guidelines.</p>
+
+<p>A different file called <code>site-rotator.js</code> would be confusing and not apt to the overall function of the script.</p>
+
+<ul>
+<li><p>No inline JavaScript, apart from calling in jQuery files from the <code>head</code>. <em>This obviously extends to CSS which was said earlier in the document</em></p></li>
+<li><p>Never leave rogue <code>console.log</code>'s in your JS. These should be used for testing and can cause issues for earlier versions of Internet Explorer.</p></li>
+<li><p>Don't manually minify your JS documents.</p></li>
+<li><p>Strive to create functions which can be generalized, take parameters, and return values. This allows for substantial code reuse and, when combined with includes or external scripts, can reduce the overhead when scripts need to change. For example, instead of hard coding a pop-window with window size, options, and url, consider creating a function which takes size, url, and options as variables.</p></li>
+<li><p>Name variables and functions logically: For example: <code>popUpWindowForAd</code> rather than <code>myWindow</code>.</p></li>
+</ul>
+
+
+<h2>Testing &amp; QA</h2>
+
+<hr />
+
+<p>Currently, we test all modern browsers. What we support are; Chrome, FireFox, Safari, Opera and Internet Explorer.</p>
+
+<h4>How we test</h4>
+
+<p>Comprehensive browser testing is a must on every web project. Great effort must be made to test across all browsers during and at the end of a development. This will ensure quality and consistent UX across all browsers.</p>
+
+<h4>IE testing</h4>
+
+<p>Currently we use virtualised versions of Windows through Parallels. Latest versions of Internet Explorer can be found at <a href="http://www.modern.ie/en-US">Modern IE</a>. Unless otherwise stated, IE testing is to start from version 8 and up; we will always support and test the most latest version of IE.</p>
+
+<h4>Other browsers</h4>
+
+<p>Chrome, Firefox, Safari and Opera are all to be tested on OSX and on either Windows 7 / 8.</p>
+
+<h4>Mobile testing</h4>
+
+<p>We have a device library for mobile testing. All responsive / adapative websites we build must be tested on iOS as a standard and must follow any designs or functionality. All other platforms (Android / Windows) will be tested on the latest version and with the most popular browser for that OS.</p>
+
+<h4>QA</h4>
+
+<p>Frontend QA will stand on two pilars:</p>
+
+<ul>
+<li><p>Visual perfection: Does the website you have build fully represent the design for the website?</p></li>
+<li><p>Code quality: Is the HTML semantic? Are all CSS classes named appropriately and modular? Do any of the JS plugins break functionality or cause any UX issues?</p></li>
+</ul>
+
+
+<p>Thorough testing will need to be done by the individual QAing any work. Visual testing should always be carried out on the latest browsers. Older versions of IE we know will not be perfect, but the site should still visually look correct and not have any problems. If required apply fixes using an IE stylesheet for that version.
+<br><br><br></p>
+
+<hr />
+
+<p><em>Document created 27/11/2013 by Richard McCartney. &copy; Message 2013.</em></p>
+</body>
+</html>
