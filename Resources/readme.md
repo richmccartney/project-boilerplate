@@ -1,4 +1,4 @@
-#Project Documents
+#Fonts
 _____
 
-Here all files which are to do with project direction, IA, UX and wireframes.
+All font files should be placed here and in a folder for each family.
